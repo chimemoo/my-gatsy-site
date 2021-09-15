@@ -1,0 +1,7 @@
+load tags
+allMarkdownRemark {
+		group(field: frontmatter___tags) {
+			tag: fieldValue
+      totalCount
+    }
+  }
