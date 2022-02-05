@@ -18,7 +18,7 @@ const Header = ({ location }) => {
           <img src={Logo} className="w-14 h-14" alt="logo" />
           <div className="ml-1">
             <Link to="/" className="text-xl">Christmemory</Link>
-            <p className="text-sm font-extralight">Software Developer</p>
+            <p className="text-sm font-extralight">Web Engineer</p>
           </div>
         </div>
         <div className="hidden sm:flex items-center">
