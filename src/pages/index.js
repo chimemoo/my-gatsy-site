@@ -35,53 +35,36 @@ const BlogIndex = ({ data, location }) => {
     <Layout location={location} title={siteTitle}>
       <SEO title="All posts" />
       {/* <Bio /> */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+      <div>
         <div className="md:col-span-2">
           <div className="flex justify-between">
             <h3 className="text-lg font-semibold mb-3" style={{ color: '#001529' }}>Latest Article</h3>
             <Link className="font-light" to="/blog">More →</Link>
           </div>
-          <div className="grid grid-cols-2 gap-2">
+          <ul className="grid gap-2">
             {posts.map(post => {
               const title = post.frontmatter.title || post.fields.slug
 
               return (
-                <div key={post.fields.slug}>
-                  <article
-                    className="post-list-item"
-                    itemScope
-                    itemType="http://schema.org/Article"
-                  >
-                    <header className="mb-1">
-                      <h2>
-                        <Link to={post.fields.slug} itemProp="url">
-                          <span itemProp="headline" className="font-normal leading-4">{title}</span>
-                        </Link>
-                      </h2>
-                    </header>
-                    <section>
-                      <p
-                        dangerouslySetInnerHTML={{
-                          __html: post.frontmatter.description || post.excerpt,
-                        }}
-                        itemProp="description"
-                        className="text-xs font-light tracking-wide leading-5"
-                        style={{ color: '#020202' }}
-                      />
-                    </section>
-                  </article>
-                </div>
+                <li className="bg-dark text-light p-4 rounded-xl">
+                  <Link to={post.fields.slug} itemProp="url" key={post.fields.slug}>
+                    <a className="text-lg text-white flex justify-between">
+                      <span>{title}</span>
+                      <span className="text-light">→</span>
+                    </a>
+                  </Link>
+                </li>
               )
             })}
-          </div>
+          </ul>
         </div>
-        <div className="col-span-1">
-          <Tag tags={tags} />
-        </div>
+      </div>
+      <div className="mt-10">
+        <Tag tags={tags} />
       </div>
       
 
-      <div className="mt-10">
+      {/* <div className="mt-10">
         <div className="flex justify-between">
           <h3 className="text-lg font-semibold mb-3" style={{ color: '#001529' }}>Latest Blog Gram</h3>
           <Link className="font-light" to="/blog">More →</Link>
@@ -99,7 +82,7 @@ const BlogIndex = ({ data, location }) => {
             ))
           }
         </div>
-      </div>
+      </div> */}
     </Layout>
   )
 }

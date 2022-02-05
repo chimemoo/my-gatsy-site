@@ -19,7 +19,7 @@ const BlogPostTemplate = ({ data, location }) => {
         title={post.frontmatter.title}
         description={post.frontmatter.description || post.excerpt}
       />
-      <div className="grid grid-cols-1 md:grid-cols-3">
+      <div>
         <div className="col-span-2">
           <article
             className="blog-post"

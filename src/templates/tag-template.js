@@ -13,39 +13,31 @@ const Tags = ({ pageContext, data }) => {
   } tagged with "${tag}"`
   return (
     <Layout>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-        <div className="col-span-2">
-        <SEO title="All Tags" />
-          <h1 className="mb-2">{tagHeader}</h1>
-          {edges.map(({ node }) => {
-            const { slug } = node.fields
-            const { title, date } = node.frontmatter
-            return (
-              <article
-                className="blog-post mb-5"
-                itemScope
-                itemType="http://schema.org/Article"
-              >
-                <header>
-                  <Link to={slug} itemProp="url">
-                    <h1 itemProp="headline" className="text-3xl font-medium leading-10 tracking-wide">{title}</h1>
-                  </Link>
-                  <p className="font-light text-sm tracking-widest">{date}</p>
-                </header>
-                <section
-                  dangerouslySetInnerHTML={{ __html: node.excerpt }}
-                  itemProp="articleBody"
-                  className="font-light leading-7 mt-2 text-sm"
-                  style={{ color: '#4B4747' }}
-                />
-              </article>
-            )
-          })}
-        </div>
-        <div>
-          <Gram />
-        </div>
-      </div>
+      <SEO title="All Tags" />
+      <h1 className="mb-2">{tagHeader}</h1>
+      {edges.map(({ node }) => {
+        const { slug } = node.fields
+        const { title, date } = node.frontmatter
+        return (
+          <article
+            className="blog-post mb-5 bg-dark p-5 text-white rounded-xl"
+            itemScope
+            itemType="http://schema.org/Article"
+          >
+            <header>
+              <Link to={slug} itemProp="url">
+                <h1 itemProp="headline" className="text-3xl font-medium">{title}</h1>
+              </Link>
+              <p className="font-light text-sm tracking-widest">{date}</p>
+            </header>
+            <section
+              dangerouslySetInnerHTML={{ __html: node.excerpt }}
+              itemProp="articleBody"
+              className="font-light mt-2 text-sm text-gray-400"
+            />
+          </article>
+        )
+      })}
     </Layout>
   )
 }

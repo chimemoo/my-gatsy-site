@@ -11,7 +11,7 @@ const Header = ({ location }) => {
 
   return (
     <div>
-      <div className="shadow-sm py-3 sm:px-10 px-5 my-0 flex flex-wrap justify-between bg-white fixed z-10 top-0 left-0 right-0">
+      <div className="py-3 sm:px-0 px-5 my-0 flex flex-wrap justify-between bg-white fixed z-10 top-0 left-0 right-0 max-w-screen-md mx-auto">
         <div className="flex items-center">
           <img src={Logo} className="w-14 h-14" alt="logo" />
           <div className="ml-1">
