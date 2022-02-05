@@ -1,7 +1,5 @@
 import * as React from "react"
 import { Link, graphql } from "gatsby"
-import Img from "gatsby-image"
-import { Carousel } from 'react-responsive-carousel';
 
 import Bio from "../components/bio"
 import Layout from "../components/layout"
@@ -14,7 +12,7 @@ const BlogIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
   const posts = data.allMarkdownRemark.nodes
   const tags = data.allMarkdownRemark.tag
-  const gram = data.gram.nodes
+  // const gram = data.gram.nodes
 
   if (posts.length === 0) {
     return (
@@ -61,27 +59,6 @@ const BlogIndex = ({ data, location }) => {
       <div className="mt-10">
         <Tag tags={tags} />
       </div>
-      
-
-      {/* <div className="mt-10">
-        <div className="flex justify-between">
-          <h3 className="text-lg font-semibold mb-3" style={{ color: '#001529' }}>Latest Blog Gram</h3>
-          <Link className="font-light" to="/blog">More →</Link>
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-4 lg:md-grid-cols-6 gap-1 md:gap-2 lg:gap-4">
-          {
-            gram.map((gramItem,i) => (
-              <Carousel showArrows={true} key={i}>
-                {gramItem.frontmatter.content.map(
-                  (item, i) => (
-                    <Img fluid={item.childImageSharp.fluid} key={i} className="max-w-32" />
-                  )
-                )}
-              </Carousel>
-            ))
-          }
-        </div>
-      </div> */}
     </Layout>
   )
 }

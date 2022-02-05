@@ -2,7 +2,6 @@ import React from "react"
 import { Link, graphql } from "gatsby"
 
 import Layout from "../components/layout"
-import Gram from "../components/gram"
 import SEO from "../components/seo"
 
 const BlogListTempate = ({ data, pageContext }) => {
