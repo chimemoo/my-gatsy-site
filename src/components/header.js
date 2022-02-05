@@ -24,6 +24,7 @@ const Header = ({ location }) => {
         <div className="hidden sm:flex items-center">
           <Link to="/blog" className={isActive('blog') ? "font-bold text-sm": "font-light text-sm"}>BLOG</Link>
           <Link to="/notes" className="ml-8 font-light text-sm">NOTE</Link>
+          <Link to="/profile" className="ml-8 font-light text-sm">CV &amp; PORTOFOLIO</Link>
           <a href="https://github.com/chimemoo" className="ml-8 font-light text-sm">GITHUB</a>
           <a href="https://linkedin.com/in/christmemory" className="ml-8 font-light text-sm">LINKEDIN</a>
         </div>
@@ -37,6 +38,7 @@ const Header = ({ location }) => {
         >
           <Link to="/blog" className="font-light text-sm">BLOG</Link>
           <Link to="/notes" className="mt-8 font-light text-sm">NOTE</Link>
+          <Link to="/profile" className="ml-8 font-light text-sm">CV &amp; PORTOFOLIO</Link>
           <a href="https://github.com/chimemoo" className="mt-8 font-light text-sm">GITHUB</a>
           <a href="https://linkedin.com/in/christmemory" className="mt-8 font-light text-sm">LINKEDIN</a>
           <button className="mt-20 w-28" onClick={() => setIsMenuVisible(false)}><span role="img" aria-label="close">🙅</span> Close</button>
