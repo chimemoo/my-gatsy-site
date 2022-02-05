@@ -9,6 +9,8 @@ const Header = ({ location }) => {
     /`${page}`/.test(location?.path)
   }
 
+  const visibleMenuClass = isMenuVisible ? 'block' : 'none';
+
   return (
     <div>
       <div className="py-3 sm:px-0 px-5 my-0 flex flex-wrap justify-between bg-white fixed z-10 top-0 left-0 right-0 max-w-screen-md mx-auto">
@@ -30,8 +32,8 @@ const Header = ({ location }) => {
       </div>
       {isMenuVisible && 
         <div 
-          className="flex sm:hidden fixed flex items-center justify-center 
-          flex-col bg-white w-100 top-0 right-0 bottom-0 left-0 z-30"
+          className={`flex sm:hidden fixed flex items-center justify-center 
+          flex-col bg-white w-100 top-0 right-0 bottom-0 left-0 z-30 ${visibleMenuClass}`}
         >
           <Link to="/blog" className="font-light text-sm">BLOG</Link>
           <Link to="/notes" className="mt-8 font-light text-sm">NOTE</Link>

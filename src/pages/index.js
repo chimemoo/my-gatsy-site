@@ -15,7 +15,6 @@ const BlogIndex = ({ data, location }) => {
   const posts = data.allMarkdownRemark.nodes
   const tags = data.allMarkdownRemark.tag
   const gram = data.gram.nodes
-  console.log(gram);
 
   if (posts.length === 0) {
     return (
