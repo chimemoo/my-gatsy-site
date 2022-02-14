@@ -22,6 +22,7 @@ const BlogListTempate = ({ data, pageContext }) => {
               className="blog-post mb-5 bg-dark p-5 text-white rounded-xl"
               itemScope
               itemType="http://schema.org/Article"
+              key={post.node.fields.slug}
             >
               <header>
                 <Link to={post.node.fields.slug} itemProp="url">

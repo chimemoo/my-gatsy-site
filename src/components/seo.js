@@ -71,7 +71,16 @@ const SEO = ({ description, lang, meta, title }) => {
           content: metaDescription,
         },
       ].concat(meta)}
-    />
+    >
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-C5R8W02JPR"></script>
+    <script dangerouslySetInnerHTML={{__html: 
+      `window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-C5R8W02JPR');`
+    }}></script>
+    </Helmet>
   )
 }
 

@@ -43,12 +43,10 @@ const BlogIndex = ({ data, location }) => {
               const title = post.frontmatter.title || post.fields.slug
 
               return (
-                <li className="bg-dark text-light p-4 rounded-xl">
-                  <Link to={post.fields.slug} itemProp="url" key={post.fields.slug}>
-                    <a className="text-lg text-white flex justify-between">
-                      <span>{title}</span>
-                      <span className="text-light">→</span>
-                    </a>
+                <li className="bg-dark text-light p-4 rounded-xl" key={post.fields.slug}>
+                  <Link to={post.fields.slug} itemProp="url" className="text-lg text-white flex justify-between">
+                    <span>{title}</span>
+                    <span className="text-light">→</span>
                   </Link>
                 </li>
               )

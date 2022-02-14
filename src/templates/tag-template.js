@@ -22,6 +22,7 @@ const Tags = ({ pageContext, data }) => {
             className="blog-post mb-5 bg-dark p-5 text-white rounded-xl"
             itemScope
             itemType="http://schema.org/Article"
+            key={slug}
           >
             <header>
               <Link to={slug} itemProp="url">

@@ -11,6 +11,7 @@ const ProfilePage = ({ location }) => {
       <div className="border-2 border-gray-200">
         <iframe
           className="w-full h-screen"
+          title="CV"
           src="https://docs.google.com/document/d/e/2PACX-1vRZ0KNZTdLuaWsbRmjxiOUnxVFPaQ1HX1z307etYmd7yuT8WD2-WZZmMy-MUiel3xvXfMjFHO2gyN0Y/pub?embedded=true">
         </iframe>
       </div>
@@ -18,6 +19,7 @@ const ProfilePage = ({ location }) => {
       <div className="border-2 border-gray-200">
         <iframe
           className="w-full h-screen"
+          title="Portfolio"
           src="https://docs.google.com/document/d/e/2PACX-1vRbgAr1HDDiTxO6WBN-B0M3-yfrUGfQXkerjc-lB3OxwuWJApvyfrKLg7ZQpNga4zEWucAJNOTIiIwb/pub?embedded=true">  
         </iframe>
       </div>
